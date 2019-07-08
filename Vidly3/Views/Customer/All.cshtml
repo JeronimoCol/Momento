@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Vidly3.Models.Customer>
+
+
+@{
+    ViewBag.Title = "All";
+}
+
+
+<ul>
+
+@foreach (var cust in Model)
+{
+    <li><a href="Index">@cust.Name</a></li>
+}
+    
+</ul>
+
+

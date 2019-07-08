@@ -1,0 +1,23 @@
+﻿@model Vidly3.Models.Customer
+@{
+    ViewBag.Title = "Details";
+}
+
+@try
+{
+    <h4>@Model.Name</h4>
+    <ul>
+        <li>@Model.MembershipType.Name </li>
+        @if (@Model.Birthdate.HasValue)
+        {
+            <li>@Model.Birthdate.Value.ToShortDateString() </li>
+        }
+
+    </ul>
+}
+catch
+{
+    <h4>No se ha encontrado ningun cliente con el numero de id indicado</h4>
+}
+
+
